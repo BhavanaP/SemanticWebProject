@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:myuniversity="http://www.example.org/univ#"
+xml:base="http://www.example.org/univ">
+<rdf:Description
+rdf:about="http://www.gsu.com/myself#bhavana">
+<myuniversity:firstname>bhavana</myuniversity:firstname>
+<myuniversity:lastname>pallepati</myuniversity:lastname>
+<myuniversity:gmail>bhavana.pallepati@gmail.com</myuniversity:gmail>
+<myuniversity:interested_in>semantic web</myuniversity:interested_in>
+<myuniversity:knows rdf:resource="http://www.gsu.com/myself#friend"/>
+</rdf:Description>
+<rdf:Description
+rdf:about="http://www.gsu.com/myself#friend">
+<myuniversity:lastname>galimelu</myuniversity:lastname>
+<myuniversity:firstname>sarath</myuniversity:firstname>
+<myuniversity:gmail>sarath.galimelu@gmail.com</myuniversity:gmail>
+</rdf:Description>
+<rdfs:Class rdf:ID="student">
+<rdfs:subClassOf rdf:resource="#person"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="professor">
+<rdfs:subClassOf rdf:resource="#person"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="course">
+</rdfs:Class>
+<rdfs:Class rdf:ID="person">
+</rdfs:Class>
+<rdf:Property
+rdf:about="http://www.example.org/univ#advises">
+<rdfs:subpropertyOf rdf:resource="#knows"/>
+<rdfs:domain rdf:resource="#professor"/>
+<rdfs:range rdf:resource="#student"/>
+</rdf:Property>
+<rdf:Property
+rdf:about="http://www.example.org/univ#teaches">
+<rdfs:domain rdf:resource="#professor"/>
+<rdfs:range rdf:resource="#course"/>
+</rdf:Property>
+<rdf:Property
+rdf:about="http://www.example.org/univ#takes">
+<rdfs:domain rdf:resource="#student"/>
+<rdfs:range rdf:resource="#course"/>
+</rdf:Property>
+<rdf:Property rdf:ID="knows">
+</rdf:Property>
+<myuniversity:professor rdf:about="http://www.example.org/univ#peter">
+<myuniversity:teaches rdf:resource="#CS201"/>
+<myuniversity:teaches rdf:resource="#CS101"/>
+<myuniversity:advises rdf:resource="#sam"/>
+</myuniversity:professor>
+<myuniversity:student rdf:ID="sam">
+<myuniversity:takes rdf:resource="#CS201"/>
+<myuniversity:takes rdf:resource="#CS101"/>
+</myuniversity:student>
+<owl:Thing rdf:ID="CS101">
+<rdf:type rdf:resource="#course"/>
+
+</owl:Thing>
+</rdf:RDF>

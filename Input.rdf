@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<rdf:RDF
+    xmlns:aboutplayer="http://www.schema.org#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.schema.org/">
+  <j.0:Person rdf:about="http://www.schema.org#Roger_Federer">
+    <aboutplayer:gender>Male</aboutplayer:gender>
+    <aboutplayer:Nationality rdf:resource="https://en.wikipedia.org/wiki/Switzerland"/>
+    <aboutplayer:height>1.85 m</aboutplayer:height>
+    <aboutplayer:givenName>Roger Federer</aboutplayer:givenName>
+    <aboutplayer:spouse rdf:resource="https://en.wikipedia.org/wiki/Mirka_Federer"/>
+    <aboutplayer:familyName>Federer</aboutplayer:familyName>
+    <aboutplayer:birthPlace rdf:resource="https://en.wikipedia.org/wiki/Basel"/>
+    <aboutplayer:address>
+      <j.0:address rdf:about="http://www.schema.org#rogerfederer_postaladdress">
+        <aboutplayer:addressCountry rdf:resource="https://en.wikipedia.org/wiki/Switzerland"/>
+        <aboutplayer:addressLocality>1 Tennis Road</aboutplayer:addressLocality>
+        <aboutplayer:addressRegion>Basel</aboutplayer:addressRegion>
+        <aboutplayer:postalCode>88080</aboutplayer:postalCode>
+      </j.0:address>
+    </aboutplayer:address>
+    <aboutplayer:birthdate>1981|08|08</aboutplayer:birthdate>
+    <aboutplayer:weight>187 lbs</aboutplayer:weight>
+  </j.0:Person>
+</rdf:RDF>
