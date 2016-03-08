@@ -17,7 +17,7 @@
 
 6.Now Validate "combined_file.rdf" file again by changing the dataDir path to "combined_file.rdf".
 
-7. After validating the "combined_file.rdf", open the Java file "finalproject_html.java" and change the path in     FileManager.get().loadModel() to the path of the "combined_file.rdf"
+7. After validating the "combined_file.rdf", open the Java file "finalproject_html.java" and change the path in       FileManager.get().loadModel() to the path of the "combined_file.rdf"
 
 8.Execute the "finalproject_html.java" file and "Index.html" file is generated with the information captured using SPARQL queries from   the "combined_file.rdf" file finally.
 
